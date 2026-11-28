@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Warda Glow Beauty & Skincare — care, glow and confidence.">
+  <title>Warda Glow | Beauty & Skincare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="top-strip">
+    <div class="container-fluid px-lg-5 d-flex justify-content-between flex-wrap gap-2">
+      <span>✦ Free Shipping All Over Pakistan</span><span>♡ &nbsp; Glow Naturally, Live Beautifully</span><span>Track Order &nbsp; | &nbsp; Help &nbsp; | &nbsp; Contact Us</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container-fluid px-lg-5">
+      <a class="navbar-brand" href="#"><img src="images/warda-glow-logo.png" alt="Warda Glow Beauty & Skincare"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="nav-actions d-flex align-items-center gap-3">
+          <button class="icon-btn" id="searchToggle" aria-label="Search">⌕</button>
+          <button class="icon-btn" aria-label="Account">♙</button>
+          <button class="icon-btn cart-button" aria-label="Shopping cart">♧ <span id="cartCount">0</span></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-5 hero-copy">
+            <p class="eyebrow">CARE • GLOW • CONFIDENCE</p>
+            <h1>Warda Glow</h1>
+            <h2>Beauty &amp; Skincare</h2>
+            <p class="hero-sub">A little care. A natural glow. A more confident you.</p>
+            <a class="btn btn-gold" href="#products">Shop Now <span>→</span></a>
+          </div>
+          <div class="col-lg-7 hero-visual" aria-label="Featured Warda Glow products">
+            <a class="hero-product-photo" href="#products"><img src="images/home-skin-care.jpg" alt="Warda Glow Skin Care Face Wash"><span>Skin Care</span></a>
+            <a class="hero-product-photo" href="#products"><img src="images/home-hair-care.jpg" alt="Warda Glow Hair Care Shampoo"><span>Hair Care</span></a>
+            <a class="hero-product-photo" href="#products"><img src="images/home-fragrance.jpg" alt="Warda Glow Rose Oud Fragrance"><span>Fragrance</span></a>
+            <a class="hero-product-photo" href="#products"><img src="images/home-beauty-care.jpg" alt="Warda Glow Beauty Care Day Cream"><span>Beauty Care</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap" id="categories">
+      <div class="container">
+        <div class="section-heading"><span></span><h2>Shop by Category</h2><span></span></div>
+        <div class="row g-3 category-grid">
+          <div class="col-6 col-md-4 col-lg-2"><button class="category-tile active" data-category="Skin Care"><span>✿</span>Skin Care</button></div>
+          <div class="col-6 col-md-4 col-lg-2"><button class="category-tile" data-category="Hair Care"><span>❀</span>Hair Care</button></div>
+          <div class="col-6 col-md-4 col-lg-2"><button class="category-tile" data-category="Makeup"><span>✧</span>Makeup</button></div>
+          <div class="col-6 col-md-4 col-lg-2"><button class="category-tile" data-category="Fragrance"><span>♜</span>Fragrance</button></div>
+          <div class="col-6 col-md-4 col-lg-2"><button class="category-tile" data-category="Beauty Care"><span>❋</span>Beauty Care</button></div>
+          <div class="col-6 col-md-4 col-lg-2"><button class="category-tile" data-category="Gift Hampers"><span>♔</span>Gift Hampers</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section section-wrap" id="products">
+      <div class="container">
+        <div class="section-heading"><span></span><h2>Our Products</h2><span></span></div>
+        <div class="shop-toolbar">
+          <p class="mb-0" id="resultCount">120 beautiful essentials</p>
+          <div class="d-flex gap-2 flex-wrap">
+            <input class="form-control search-input" id="searchInput" type="search" placeholder="Search products...">
+            <select class="form-select sort-select" id="sortSelect" aria-label="Sort products">
+              <option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="az">Name: A to Z</option>
+            </select>
+          </div>
+        </div>
+        <div class="row g-4" id="productGrid"></div>
+        <div class="text-center mt-4"><button class="btn btn-outline-gold" id="showAllBtn">Show all products</button></div>
+      </div>
+    </section>
+
+    <section class="promo-band">
+      <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+        <div><p class="eyebrow mb-2">A MOMENT OF SELF-CARE</p><h2>Natural Beauty<br><em>in Every Drop</em></h2><p class="mb-0">Make room for a little glow in your everyday routine.</p></div>
+        <a class="btn btn-gold" href="#products">Shop Now →</a>
+      </div>
+    </section>
+
+    <section class="benefits-strip">
+      <div class="container">
+        <div class="row g-3 text-center">
+          <div class="col-6 col-lg-3 benefit"><span>⬟</span><div><b>Secure Payment</b><small>100% Secure Payment</small></div></div>
+          <div class="col-6 col-lg-3 benefit"><span>🚚</span><div><b>Fast &amp; Free Delivery</b><small>All Over Pakistan</small></div></div>
+          <div class="col-6 col-lg-3 benefit"><span>♧</span><div><b>Dedicated Support</b><small>Always Here to Help</small></div></div>
+          <div class="col-6 col-lg-3 benefit"><span>✉</span><div><b>Newsletter</b><small>Get Exclusive Offers</small></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container py-5">
+      <div class="row g-4">
+        <div class="col-lg-4" id="about"><img class="footer-logo" src="images/warda-glow-logo.png" alt="Warda Glow"><p class="footer-tagline">Discover your natural beauty with our premium beauty and skincare collection.</p></div>
+        <div class="col-6 col-lg-2"><h3>Quick Links</h3><a href="#">Home</a><a href="#about">About Us</a><a href="#products">Shop</a><a href="#categories">Categories</a></div>
+        <div class="col-6 col-lg-2" id="faq"><h3>Customer Care</h3><a href="#faq">FAQs</a><a href="#contact">Shipping Policy</a><a href="#contact">Return Policy</a><a href="#contact">Contact Us</a></div>
+        <div class="col-lg-2"><h3>Contact Us</h3><p>☎ &nbsp;+92 3326449934</p><p>✉ &nbsp;wardaasifwork@gmail.com</p><p>⌖ &nbsp;Rajanpur, Pakistan</p></div>
+        <div class="col-lg-2"><h3>Follow Us</h3><div class="socials"><a href="#">f</a><a href="#">◎</a><a href="#">♪</a><a href="#">▶</a></div></div>
+      </div>
+      <div class="newsletter mt-4">
+        <div><h3>Join the Warda Glow family</h3><p class="mb-0">Subscribe for beauty tips and exclusive offers.</p></div>
+        <form id="newsletterForm" class="d-flex"><input type="email" class="form-control" placeholder="Your email address" required><button class="btn btn-gold">Subscribe</button></form>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container d-flex justify-content-between flex-wrap gap-2"><span>© 2026 Warda Glow. All Rights Reserved.</span><span>Glow naturally, live beautifully ♡</span></div></div>
+  </footer>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3"><div id="siteToast" class="toast" role="alert"><div class="toast-body">Added to your bag.</div></div></div>
+  <!-- Image zoom lightbox -->
+  <div id="zoomModal" class="zoom-modal" role="dialog" aria-modal="true" aria-label="Product image viewer" hidden>
+    <div class="zoom-backdrop" data-zoom-close></div>
+    <button class="zoom-btn zoom-close" data-zoom-close aria-label="Close">✕</button>
+    <button class="zoom-btn zoom-nav zoom-prev" id="zoomPrev" aria-label="Previous image">‹</button>
+    <button class="zoom-btn zoom-nav zoom-next" id="zoomNext" aria-label="Next image">›</button>
+    <div class="zoom-stage" id="zoomStage"><img id="zoomImg" src="" alt="" draggable="false"></div>
+    <div class="zoom-caption" id="zoomCaption"></div>
+    <div class="zoom-controls">
+      <button class="zoom-btn" id="zoomOut" aria-label="Zoom out">−</button>
+      <span id="zoomLevel">100%</span>
+      <button class="zoom-btn" id="zoomIn" aria-label="Zoom in">+</button>
+      <button class="zoom-btn zoom-reset" id="zoomReset" aria-label="Reset zoom">Reset</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="javascript/products.js"></script>
+  <script src="javascript/app.js"></script>
+</body>
+</html>
